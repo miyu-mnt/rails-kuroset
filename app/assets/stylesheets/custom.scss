@@ -42,6 +42,17 @@ body {
   }
 }
 
+/* scroll*/
+#to-top-btn {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  cursor: pointer;
+}
+.to-top {
+  width: 50px;
+}
+
 /* body */
 h1 {
   font-size: 50px;
