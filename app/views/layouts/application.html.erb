@@ -21,6 +21,16 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
+              <%= link_to '#' do %>
+                <%= image_tag "icons/mypage.png" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '#' do %>
+                <%= image_tag "icons/users.png" %>
+              <% end %>
+            </li>
+            <li>
               <%= link_to new_topic_path do %>
                 <%= image_tag "icons/camera.png" %>
               <% end %>
@@ -43,7 +53,7 @@
             </li>
             <li>
               <%= link_to new_user_path do %>
-                <%= image_tag "icons/register.png" %>
+                <%= image_tag "icons/signin.png" %>
               <% end %>
             </li>
             <li>
