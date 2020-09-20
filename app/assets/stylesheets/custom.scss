@@ -163,10 +163,45 @@ h1 {
       padding: 20px 0 0 20px;
       border-top: 1px solid #ccc;
     }
+    .fav-count {
+      display:inline-block;
+      vertical-align: middle;
+      height: 0px;
+    }
   }
 }
 
 /* topic edit*/
 .topic-edit-wrapper {
   padding-top: 180px;
+}
+
+/* user index */
+.user-index-wrapper {
+  padding: 80px 0 20px 0;
+  
+  .user-index-single {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    height: 140px;
+    display: flex;
+    
+    &:hover {
+      text-decoration: none;
+    }
+    
+    .user-icon {
+      width: 100px;
+      border-radius: 5px;
+    }
+    .user-info {
+      margin-left: 40px;
+    }
+    .user-name {
+      color: #000;
+      font-size: 20px
+    }
+  }
 }
