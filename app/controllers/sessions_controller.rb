@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action:forbid_login_user, only: [:new, :create]
+  
   def new
   end
   
@@ -27,9 +29,9 @@ class SessionsController < ApplicationController
     params.require(:session).permit(:password)
   end
   
-  def log_in(user)
-    session[:user_id] = user.id
-  end
+  # def log_in(user)
+  #   session[:user_id] = user.id
+  # end
   
   def log_out
     session.delete(:user_id)

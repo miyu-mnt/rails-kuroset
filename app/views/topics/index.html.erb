@@ -40,28 +40,5 @@
       </div>
     <% end %>
     
-    <div id = 'to-top-btn'>
-      <%= image_tag 'icons/top.png', class: 'to-top' %>
-    </div>
-    
-    <script>
-    $(function() {
-      var topBtn = $('#to-top-btn');
-      topBtn.hide();
-      
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-          topBtn.fadeIn();
-        } else {
-          topBtn.fadeOut();
-        }
-      });
-      
-      topBtn.click(function() {
-        $('body,html').animate({scrollTop: 0}, 'slow');
-      });
-    });
-    </script>
-    
   </div>
 </div>
