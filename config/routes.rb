@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   
   resources :users
+  get 'users/:id/favorites', to: 'users#favorites'
   
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

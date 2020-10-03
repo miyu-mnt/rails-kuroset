@@ -1,0 +1,11 @@
+<div class='user-info'>
+    <%= image_tag topic.user.user_image, class: 'user-icon' %>
+    <%= link_to user_path(id: topic.user.id) do %>
+      <p class='user-name'>
+        <%= topic.user.name %>
+      </p>
+    <% end %>
+    <p class='user-bio'>
+      <!--bio-->
+    </p>
+</div>

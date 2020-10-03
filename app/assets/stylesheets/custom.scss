@@ -8,6 +8,10 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-color: #000;
+  font-weight: 150;
+  a {
+    color: #fff !important;
+  }
 }
 
 /* alert */
@@ -22,14 +26,10 @@ body {
 .navbar-transparent {
   margin-bottom: 0px;
   background-color: rgba(0,0,0,0.5);
-  a {
-    color: #fff !important;
-  }
-
+  
   .header-logo {
     color: #fff;
     font-size: 40px;
-    font-weight: 100;
     margin-top: 10px;
     
     &:hover {
@@ -134,17 +134,29 @@ h1 {
   
   .topic-index-single {
     background-color: #fff;
-    padding: 20px 0;
     margin: 20px 0;
+    padding: 20px 0;
     border-radius: 5px;
     
-    .topic-author {
-      font-size: 20px;
-      padding-left: 20px;
+    .user-info {
+      display: flex;
       margin: 0;
+      
+      .user-icon {
+        width: 30px;
+        margin: 0 0 0 20px;
+        border-radius: 50%;
+      }
+      .user-name {
+        color: #000;
+        font-size: 15px;
+        margin: 0 0 0 10px;
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
     img {
-      margin-top: 20px;
+      margin-top: 10px;
       width: 100%;
     }
     .topic-index-icon {
@@ -159,14 +171,19 @@ h1 {
       margin: 20px 20px 0 0;
     }
     .topic-text {
-      margin-top: 20px; 
-      padding: 20px 0 0 20px;
+      margin: 20px; 
+      padding: 20px 0 0 0;
       border-top: 1px solid #ccc;
     }
     .fav-count {
-      display:inline-block;
+      display: inline-block;
       vertical-align: middle;
       height: 0px;
+    }
+    .topic-created {
+      text-align: right;
+      font-size: 12px;
+      margin: 0 20px 10px 0;
     }
   }
 }
@@ -194,14 +211,118 @@ h1 {
     
     .user-icon {
       width: 100px;
-      border-radius: 5px;
+      border-radius: 50%;
     }
     .user-info {
       margin-left: 40px;
     }
     .user-name {
       color: #000;
-      font-size: 20px
+      font-size: 20px;
+      margin: 0;
+      display: inline-block;
+    }
+  }
+}
+
+/* user show*/
+.user-show-wrapper {
+  padding: 80px 0 20px 0;
+  .user-infos {
+    color: #fff;
+    margin: 50px 0 30px 0;
+    padding: 50px 0;
+    display: flex;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    .user-icon {
+      width: 40%;
+      border-radius: 50%;
+    }
+    .user-info {
+      width: 60%;
+      margin: 20px 0 20px 50px;
+      position: relative;
+    }
+      .user-name {
+        font-size: 30px;
+      }
+      .topic-edit {
+        font-size: 20px;
+        position: absolute;
+        bottom: 0;
+      }
+  }
+  .user-topics {
+    .topic-tab {
+      display: flex;
+      margin: 0 0 30px 0;
+      padding: 0;
+      li {
+        width: 50%;
+        text-align: center;
+      }
+        .tab-icon {
+          width: 50px;
+        }
+      .active {
+        opacity : 0.5;
+      }
+    }
+    
+    .topic-index-single {
+      background-color: #fff;
+      margin: 20px 0;
+      padding: 20px 0;
+      border-radius: 5px;
+      
+      .user-info {
+        display: flex;
+        margin: 0;
+        
+        .user-icon {
+          width: 30px;
+          margin: 0 0 0 20px;
+          border-radius: 50%;
+        }
+        .user-name {
+          color: #000;
+          font-size: 15px;
+          margin: 0 0 0 10px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      img {
+        margin-top: 10px;
+        width: 100%;
+      }
+      .topic-index-icon {
+        width: 20px;
+        height: 20px;
+        margin: 20px 0 0 20px;
+      }
+      .topic-edit {
+        color: #000;
+        display: inline-block;
+        float: right;
+        margin: 20px 20px 0 0;
+      }
+      .topic-text {
+        margin: 20px; 
+        padding: 20px 0 0 0;
+        border-top: 1px solid #ccc;
+      }
+      .fav-count {
+        display: inline-block;
+        vertical-align: middle;
+        height: 0px;
+      }
+      .topic-created {
+        text-align: right;
+        font-size: 12px;
+        margin: 0 20px 10px 0;
+      }
     }
   }
 }
