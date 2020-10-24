@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   root 'pages#top'
   get '/about', to: 'pages#about'
   
+  resources :users, only: [:get] do
+    get 'favorites'
+  end
   resources :users
-  get 'users/:id/favorites', to: 'users#favorites'
+  
   
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

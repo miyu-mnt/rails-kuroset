@@ -155,8 +155,10 @@ h1 {
         vertical-align: middle;
       }
     }
-    img {
+    .topic-img {
       margin-top: 10px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
       width: 100%;
     }
     .topic-index-icon {
@@ -230,8 +232,8 @@ h1 {
   padding: 80px 0 20px 0;
   .user-infos {
     color: #fff;
-    margin: 50px 0 30px 0;
-    padding: 50px 0;
+    margin: 30px 0 30px 0;
+    padding: 30px 0;
     display: flex;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
@@ -263,7 +265,7 @@ h1 {
         text-align: center;
       }
         .tab-icon {
-          width: 50px;
+          width: 30px;
         }
       .active {
         opacity : 0.5;
@@ -293,9 +295,11 @@ h1 {
           vertical-align: middle;
         }
       }
-      img {
-        margin-top: 10px;
-        width: 100%;
+      .topic-img {
+      margin-top: 10px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
       }
       .topic-index-icon {
         width: 20px;

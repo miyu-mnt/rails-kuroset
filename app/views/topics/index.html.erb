@@ -13,7 +13,7 @@
               <% end %>
             </div>
              
-            <%= image_tag topic.image.url %>
+            <%= image_tag topic.image.url, class: 'topic-img' %>
             
             <% if !topic.favorite_users.include?(current_user) %>
               <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
@@ -24,11 +24,11 @@
                 <%= image_tag 'icons/heart_bl.png', class: 'topic-index-icon' %>
               <% end %>
             <% end %>
-            
+              
             <span class = 'fav-count'>
               <%= topic.favorite_users.count %>
             </span>
-            
+              
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             
             <% if topic.user.id == current_user.id %>
@@ -40,9 +40,7 @@
               <% end %>
             <% end %>
             
-            <p class="topic-text">
-              <%= simple_format(topic.description) %>
-            </p>
+            <%= simple_format(topic.description, class: 'topic-text') %>
             
             <p class='topic-created'>
               <%= topic.created_at.strftime('%Y/%m/%d') %>

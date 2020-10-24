@@ -1,6 +1,7 @@
 class Topic < ApplicationRecord
   validates :user_id, presence: true
   validates :image, presence: true
+  validates :description, length: {maximum: 500}
   
   belongs_to :user
   has_many :favorites
