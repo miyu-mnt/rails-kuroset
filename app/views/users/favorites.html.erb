@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="text-center text-white">Profile</h1>
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-8 col-md-offset-2">
         
         <div class='user-infos'>
           <%= image_tag @user.user_image, class: 'user-icon' %>
@@ -10,12 +10,11 @@
             <p class='user-name'>
               <%= @user.name %>
             </p>
-            <p class='user-bio'>
-              <!--bio-->
-            </p>
+            <%= simple_format(@user.user_bio, class: 'user-bio') %>
+            
             <% if @user.id == current_user.id %>
               <%= link_to edit_user_path(id: @user.id) do %>
-                <p class = 'topic-edit'>edit</p>
+                <p class = 'user-edit'>edit</p>
               <% end %>
             <% end %>
           </div>
@@ -36,48 +35,8 @@
           </ul>
           
           <% @favorite_topics.each do |topic| %>
-            <div class="topic-index-single">
-              <div class='user-info'>
-                <%= image_tag topic.user.user_image, class: 'user-icon' %>
-                <%= link_to user_path(id: topic.user.id) do %>
-                  <p class='user-name'>
-                    <%= topic.user.name %>
-                  </p>
-                <% end %>
-              </div>
-                  
+            <div class='topic-index-single'>
               <%= image_tag topic.image.url, class: 'topic-img' %>
-                  
-              <% if !topic.favorite_users.include?(current_user) %>
-                <%= link_to favorites_path(topic_id: topic.id), method: :post do %>
-                  <%= image_tag 'icons/heart_wh.png', class: 'topic-index-icon' %>
-                <% end %>
-              <% else %>
-                <%= link_to favorites_path(topic_id: topic.id), method: :delete do %>
-                  <%= image_tag 'icons/heart_bl.png', class: 'topic-index-icon' %>
-                <% end %>
-              <% end %>
-              
-              <span class = 'fav-count'>
-                <%= topic.favorite_users.count %>
-              </span>
-              
-              <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
-              
-              <% if topic.user.id == current_user.id %>
-                <%= link_to topic_path(id: topic.id), method: :delete do %>
-                  <span class = 'topic-edit'>delete</span>
-                <% end %>
-                <%= link_to edit_topic_path(id: topic.id) do %>
-                  <span class = 'topic-edit'>edit</span>
-                <% end %>
-              <% end %>
-              
-              <%= simple_format(topic.description, class: 'topic-text') %>    
-              
-              <p class='topic-created'>
-                <%= topic.created_at.strftime('%Y/%m/%d') %>
-              </p>
             </div>
           <% end %>
         </div>

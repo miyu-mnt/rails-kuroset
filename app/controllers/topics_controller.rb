@@ -3,6 +3,8 @@ class TopicsController < ApplicationController
   
   def index
     @topics = Topic.all.includes(:favorite_users).order(created_at: :desc)
+    # @comment = Comment.new
+    # @comments = topic.comments.order(created_at: :desc)
   end
   
   def show

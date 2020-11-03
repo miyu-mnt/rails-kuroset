@@ -5,7 +5,7 @@
         <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
             <div class='user-info'>
-              <%= image_tag topic.user.user_image, class: 'user-icon' %>
+              <%= image_tag topic.user.user_image.url, class: 'user-icon' %>
               <%= link_to user_path(id: topic.user.id) do %>
                 <p class='user-name'>
                   <%= topic.user.name %>
@@ -45,6 +45,7 @@
             <p class='topic-created'>
               <%= topic.created_at.strftime('%Y/%m/%d') %>
             </p>
+            
             
           </div>
         </div>

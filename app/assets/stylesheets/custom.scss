@@ -130,7 +130,7 @@ h1 {
 
 /* topic index*/
 .topic-index-wrapper {
-  padding: 80px 0 20px 0;
+  padding: 80px 0 10px 0;
   
   .topic-index-single {
     background-color: #fff;
@@ -144,6 +144,7 @@ h1 {
       
       .user-icon {
         width: 30px;
+        height: 30px;
         margin: 0 0 0 20px;
         border-radius: 50%;
       }
@@ -213,6 +214,7 @@ h1 {
     
     .user-icon {
       width: 100px;
+      height: 100px;
       border-radius: 50%;
     }
     .user-info {
@@ -230,6 +232,7 @@ h1 {
 /* user show*/
 .user-show-wrapper {
   padding: 80px 0 20px 0;
+  
   .user-infos {
     color: #fff;
     margin: 30px 0 30px 0;
@@ -238,22 +241,25 @@ h1 {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     .user-icon {
-      width: 40%;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
     }
     .user-info {
-      width: 60%;
       margin: 20px 0 20px 50px;
       position: relative;
-    }
       .user-name {
         font-size: 30px;
       }
-      .topic-edit {
+      // .user-bio {
+      //   font-size: 30px;
+      // }
+      .user-edit {
         font-size: 20px;
         position: absolute;
         bottom: 0;
       }
+    }
   }
   .user-topics {
     .topic-tab {
@@ -263,10 +269,10 @@ h1 {
       li {
         width: 50%;
         text-align: center;
-      }
         .tab-icon {
           width: 30px;
         }
+      }
       .active {
         opacity : 0.5;
       }
@@ -277,56 +283,17 @@ h1 {
       margin: 20px 0;
       padding: 20px 0;
       border-radius: 5px;
-      
-      .user-info {
-        display: flex;
-        margin: 0;
-        
-        .user-icon {
-          width: 30px;
-          margin: 0 0 0 20px;
-          border-radius: 50%;
-        }
-        .user-name {
-          color: #000;
-          font-size: 15px;
-          margin: 0 0 0 10px;
-          display: inline-block;
-          vertical-align: middle;
-        }
-      }
       .topic-img {
-      margin-top: 10px;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      width: 100%;
-      }
-      .topic-index-icon {
-        width: 20px;
-        height: 20px;
-        margin: 20px 0 0 20px;
-      }
-      .topic-edit {
-        color: #000;
-        display: inline-block;
-        float: right;
-        margin: 20px 20px 0 0;
-      }
-      .topic-text {
-        margin: 20px; 
-        padding: 20px 0 0 0;
+        margin-top: 10px;
         border-top: 1px solid #ccc;
-      }
-      .fav-count {
-        display: inline-block;
-        vertical-align: middle;
-        height: 0px;
-      }
-      .topic-created {
-        text-align: right;
-        font-size: 12px;
-        margin: 0 20px 10px 0;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
       }
     }
   }
+}
+
+/* user edit */
+.user-edit-wrapper {
+  padding: 80px 0 20px 0;
 }
